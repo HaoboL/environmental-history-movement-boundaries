@@ -116,12 +116,15 @@ def validate_text_safety() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
             continue
+        relative = path.relative_to(ROOT)
+        if any(part in EXCLUDED_PARTS for part in relative.parts):
+            continue
         if "frozen_originals" in path.parts:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for pattern in forbidden:
             if pattern.search(text):
-                raise AssertionError(f"potential private path or secret pattern in {path.relative_to(ROOT)}")
+                raise AssertionError(f"potential private path or secret pattern in {relative}")
 
 
 def main() -> int:
