@@ -1,0 +1,12 @@
+component,program,frozen_results,role,external_input_requirement
+Primary last-record decomposition,analysis/last_record_decomposition.py,results/last_record_decomposition,"Computes E=R+L and rho-minus-tau tests for wandering albatross and red-footed booby events","Public Goto and USGS tracks; frozen radial-drawdown event tables; daily CHL"
+Landing timing,analysis/landing_timing.py,results/landing_timing,"Aligns directly classified Uesaka landings to movement boundaries across 15 scales","Public Uesaka Dryad multisensor data; frozen radial-drawdown event tables"
+Red-footed-booby behaviour context,analysis/booby_behavior_context.py,results/booby_behavior_context,"Contrasts last-record metrics across dive-near and wet-only contexts","Public USGS GPS/TDR data; frozen last-record event table"
+Short-tailed-shearwater behaviour bridge,analysis/shearwater_behavior_bridge.py,results/shearwater_behavior,"Constructs behaviour-blind movement endpoints and attaches author-derived accelerometry states","Public Dryad shearwater data; radial-drawdown dependency"
+Short-tailed-shearwater last-record analysis,analysis/shearwater_last_record_behavior.py,results/shearwater_behavior,"Tests last-record metrics in foraging and resting contexts","Behaviour bridge output; daily CHL"
+Laysan same-event integration,analysis/laysan_same_event_integration.py,results/laysan_same_event,"Combines absolute-productivity and path-relative last-record predictors within the same events","Public USGS tracks; frozen radial-drawdown/CHL event tables"
+Red-footed-booby dive direction,analysis/booby_dive_timing.py,results/booby_dive_timing,"Tests pre-versus-post dive timing around the same last-record events","Public USGS GPS/TDR data; frozen last-record event table"
+Boundary counterfactual,analysis/eligible_boundary_counterfactual.py,results/boundary_counterfactual,"Replaces observed boundaries with eligible earlier radial records and refits segment tail summaries","Public Goto tracks; frozen dense CHL paths and segment fitting thresholds"
+Main figures,figures/build_main_figures.py,data/source_data,"Builds Figs. 1-4 from frozen formal outputs","No raw-data rerun"
+Supplementary figures,figures/build_supplementary_figures.py,data/source_data,"Builds Supplementary Figs. 1-5 from frozen formal outputs","No raw-data rerun"
+Supplementary Data,figures/package_supplementary_data.py,data/derived,"Builds Source Data and Supplementary Data packages","No raw-data rerun"

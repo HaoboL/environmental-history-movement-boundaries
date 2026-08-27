@@ -1,0 +1,25 @@
+{
+  "status": "D107_FORMAL_V1_AUDIT_PASS",
+  "audited_verdict": "NO_DIRECT_FORAGING_STATE_LINK",
+  "seed": 1070826,
+  "phase_reps": 999,
+  "bootstrap_reps": 50000,
+  "cpu_affinity": [
+    4
+  ],
+  "events": 254,
+  "maximum_reconstructed_metric_difference": 9.71445146547012e-17,
+  "slope_pass_scales": [],
+  "group_pass_scales": [
+    500,
+    1000,
+    2000
+  ],
+  "joint_adjacent_pairs": [],
+  "input_hashes": {
+    "event_metrics": "d27dea9f09d2232a2d390c324eaa93d4f864af7678933bf8cec682bb09cdfb2f",
+    "event_sequences": "d4efbea3370920457557149e6ad368da8171c9840130c89f58f9e4e0d4f99516",
+    "formal_summary": "d36c6259bb630c6a33a83b9578d675ba0d50c0f9b45c106573a9a58886b8fa60",
+    "audit_script": "dde06dd6ab0853caf8d6010b15aef9e1f49b33222cb93e5a75689c767d75c2a6"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "NO_DIRECT_FORAGING_STATE_LINK",
+  "formal_seed": 1070825,
+  "phase_reps": 999,
+  "bootstrap_reps": 20000,
+  "cpu_affinity": [
+    3
+  ],
+  "runtime_s": 5.417242754949257,
+  "eligible_events": 254,
+  "eligible_individuals": 9,
+  "events_by_scale": {
+    "500": 78,
+    "1000": 73,
+    "2000": 65,
+    "5000": 38
+  },
+  "individuals_by_scale": {
+    "500": 9,
+    "1000": 9,
+    "2000": 9,
+    "5000": 9
+  },
+  "maximum_E_minus_R_minus_L_error": 1.1102230246251565e-16,
+  "primary_slope_pass_scales": [],
+  "primary_forage_group_pass_scales": [
+    500,
+    1000,
+    2000
+  ],
+  "combined_pass_scales": [],
+  "adjacent_combined_pass_pairs": [],
+  "chl_audit": {
+    "manifest_rows": 24,
+    "files_found": 24,
+    "unique_finite_positive_cells": 10908,
+    "overlap_cells": 1168,
+    "maximum_overlap_value_difference": 0.0
+  },
+  "behavior_input_audit": {
+    "input_rows_all_deployments": 839074,
+    "selected_valid_unique_rows": 839045,
+    "deployments": 13,
+    "biological_individuals": 10,
+    "duplicates_removed": 20,
+    "non_1s_edges": 24,
+    "impossible_speed_edges": 4,
+    "eligible_highres_runs_ge900": 28,
+    "eligible_highres_points": 797963,
+    "hardware_gps_interval_s": 300,
+    "public_behavior_interval_s": 1,
+    "spatial_interpretation": "per-second positions are synchronization/interpolated support, not independent 1-Hz GPS fixes",
+    "projection": "WGS84_AEQD",
+    "projection_center_lat": -38.4292127,
+    "projection_center_lon": 143.1814203
+  },
+  "hashes": {
+    "prereg": "9caf4ff343b25d9da2e2af0c814615b2a40c0d7be5b9b55084fb9ef37db40be1",
+    "catalog": "d897562ef78d5dd77161dfe85a8ce3aa8245386dcdb6605a8c4074ae2a86ba9a",
+    "manifest": "e051affbd7c6d0136a04e773e18c7756bdb4b4cf0fc8038725f06c08e3d69a20",
+    "frozen_endpoints": "40f0bea29d9f868121641a3270a78d8864390b3e35da7753698091278c974b43",
+    "public_behavior": "09ee71be7a0be335ecbf5b0626ca4339bc7f0daa4c50af2c8a62af79860b0964",
+    "script": "fb9ec337fdf1ade470eee43b9dfb6d075febf9dcd8b765aec2feb5aa1d99df0e",
+    "event_metrics": "d27dea9f09d2232a2d390c324eaa93d4f864af7678933bf8cec682bb09cdfb2f",
+    "event_sequences": "d4efbea3370920457557149e6ad368da8171c9840130c89f58f9e4e0d4f99516"
+  }
+}

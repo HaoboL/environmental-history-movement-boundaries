@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETE",
+  "cpu_affinity": [
+    7
+  ],
+  "cpu1_excluded": true,
+  "bootstrap_reps": 20000,
+  "phase_reps": 5000,
+  "uesaka_events": 34561,
+  "uesaka_scales": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    200,
+    300,
+    500,
+    750,
+    1000,
+    1500,
+    2000
+  ],
+  "d09_landings": 2544,
+  "d09_ingestions": 403,
+  "d02_eligible": {
+    "RD100": 22,
+    "RD200": 0
+  },
+  "prereg_sha256": "500c9e8f78cd948fc019d16431200573a67ed70d0ba84aca4928410b1ef458ee",
+  "script_sha256": "5de485774d313bad12e00d6570120e3b61e9edc8cbaebc8f6849b755f25dddc3",
+  "input_sha256": {
+    "PAPER2_ALBATROSS_ECOLOGY/UESAKA_RD10_100_CHL_LANDING_SENSITIVITY_V1/formal/rd10_100_middle_events_with_gps_outcome.csv.gz": "86fcaa77f31e2ebc1489cc78e011a42eca7b86704bd2a7725140a1c26cbb02c9",
+    "PAPER2_ALBATROSS_ECOLOGY/UESAKA_STEP_METHOD_RD_DELTA_LANDING_SENSITIVITY_V1/formal/rd_cross_delta_events.csv.gz": "848c479931cb198b03998d02681d4382c576e3853bc91187a1665b2946108ac1",
+    "PAPER2_ALBATROSS_ECOLOGY/UESAKA_STEP_METHOD_RD_DELTA_LANDING_SENSITIVITY_V1/formal/method_events_with_gps_outcome.csv.gz": "6b6b66fe931c11f093233fb522afeb47140b3d8c13ce3038cdb090285a852ee0",
+    "PAPER2_ALBATROSS_ECOLOGY/UESAKA_STEP_METHOD_RD_DELTA_LANDING_SENSITIVITY_V1/formal/gps_state_transitions_reproduced.csv.gz": "1e3efb631cc4dd3393217f246e3ad85ebfa183b1cf819700950e8ef43acf7cdb",
+    "PAPER2_ALBATROSS_ECOLOGY/UESAKA_STEP_METHOD_RD_DELTA_LANDING_SENSITIVITY_V1/formal/phase_runs.csv.gz": "46fce2ab1791b533f33b4d6e1d2787f023f60da25471a15f05ca07a287e1b90c",
+    "PAPER2_ALBATROSS_ECOLOGY/D09_DMS_SOURCE_FOOD_OUTCOME_V1/analysis_formal_v1/primary_landing_sample.parquet": "1167d104e43e28dd8905f1cd73754d67778e0f17720d295d1608a24747897340",
+    "PAPER2_ALBATROSS_ECOLOGY/D09_DMS_SOURCE_FOOD_OUTCOME_V1/analysis_formal_v1/ingestion_with_dms.parquet": "9560190b566fcbb80513393f88b50bc07b1c4c1f92e6ed4f98b3f70e708b8a14",
+    "codex_runs/d02_eight_str_full_analysis_20260629_0750/results/results_albatross_full_hypothesis_experiments/D02_episode_validation_v2/D02_behavior_episodes_primary.parquet": "ddc0ddf160bbbc12ae9220a67241f0c14890406a4024b2d71a04ab94d20e59f9",
+    "codex_runs/albatross_all_datasets_external_validation_audit_20260628_185339/results_snapshot/D02_episode_validation/D02_boundary_times_long.parquet": "0c114b2849689f7381a85ed62a87034fa332436e896cfde4b0a8105355de8e73"
+  },
+  "elapsed_s": 208.24936703196727,
+  "rd_rerun": false,
+  "network_used": false,
+  "paper1_modified": false
+}

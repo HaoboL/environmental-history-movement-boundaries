@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "synthetic_post_detection": true,
+  "uesaka_scales": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    200,
+    300,
+    500,
+    750,
+    1000,
+    1500,
+    2000
+  ],
+  "uesaka_events": 34561,
+  "uesaka_birds": 19,
+  "uesaka_run_start_spread_max_s": 49.0,
+  "uesaka_run_end_spread_max_s": 49.0,
+  "d09_landings_bilateral_60m": 2544,
+  "d09_ingestions": 403,
+  "d02_coverage": {
+    "RD100": {
+      "events": 22,
+      "birds": 7
+    },
+    "RD200": {
+      "events": 0,
+      "birds": 0
+    }
+  }
+}

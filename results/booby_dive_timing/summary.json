@@ -1,0 +1,87 @@
+{
+  "status": "D126_FORMAL_COMPLETE",
+  "seed": 1260826,
+  "phase_reps": 999,
+  "bootstrap_reps": 20000,
+  "affinity": [
+    2
+  ],
+  "cpu1_excluded": true,
+  "anchor_audit": {
+    "reconstructed_events": 5273,
+    "frozen_events": 5273,
+    "exact_event_join": true,
+    "metadata_mismatch": 0,
+    "maximum_metric_difference": 1.1102230246251565e-16,
+    "maximum_E_minus_R_minus_L_error": 1.1102230246251565e-16,
+    "reconstruction_audit_rows": 10647,
+    "validate_only": false
+  },
+  "join_audit": {
+    "records": 5273,
+    "labels": 10647,
+    "exact_join": true,
+    "groups": {
+      "none_observed": 4036,
+      "post_only": 594,
+      "pre_only": 413,
+      "both": 230
+    }
+  },
+  "scale_audit": [
+    {
+      "scale_m": 250,
+      "events": 1914,
+      "segments": 157,
+      "birds": 109,
+      "paired_pre_post_birds": 59,
+      "loo_L_union_min": 0.08588583326332874,
+      "loo_L_union_max": 0.12162222331006359,
+      "loo_fraction_positive": 1.0
+    },
+    {
+      "scale_m": 500,
+      "events": 1552,
+      "segments": 151,
+      "birds": 109,
+      "paired_pre_post_birds": 42,
+      "loo_L_union_min": 0.052044949899983574,
+      "loo_L_union_max": 0.10024471761194641,
+      "loo_fraction_positive": 1.0
+    },
+    {
+      "scale_m": 1000,
+      "events": 1119,
+      "segments": 143,
+      "birds": 105,
+      "paired_pre_post_birds": 34,
+      "loo_L_union_min": 0.10277801811371423,
+      "loo_L_union_max": 0.16493467237563167,
+      "loo_fraction_positive": 1.0
+    },
+    {
+      "scale_m": 2000,
+      "events": 688,
+      "segments": 133,
+      "birds": 103,
+      "paired_pre_post_birds": 22,
+      "loo_L_union_min": 0.06569383681204381,
+      "loo_L_union_max": 0.1590490736436185,
+      "loo_fraction_positive": 1.0
+    }
+  ],
+  "verdict": {
+    "primary_pass_scales_m": [],
+    "same_sign_adjacent_pairs_m": [],
+    "verdict": "NO_TEMPORAL_DIRECTION_SPECIFICITY"
+  },
+  "input_sha256": {
+    "prereg": "b3823a3bd6ff1429ecc5852a7500e717754c6ca54b231ac758423c9c55f6e009",
+    "d49": "b95c6f0b5e6f2d1f57fbc8b40f2b514a3fca594d33b1ab83959008f9bfd8957f",
+    "d104_events": "aeb4cfb5b3fb8a5e38524e4a7f597a0e966fc9cc38a440591d987d8d0c86e23b",
+    "d28_events": "017fceace0c54e57d315dd1d7fb96bd6f21ee3d6423a73bd6ba9248a8c92d9c4",
+    "d104_script": "55d98bf817234df51fba45f8a4bfc83f3e03ee4e84fa13863f4c6592866b1af6",
+    "this_script": "675732d2b28e6fe99d00206ba36020073c53697c80641541d36ce728509a2fb2"
+  },
+  "interpretation_limit": "TDR dive attempt timing around a last-passage event; not capture, sensory cue, prey truth, or Levy generation."
+}

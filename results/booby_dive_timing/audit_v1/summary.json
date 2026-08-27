@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "affinity": [
+    2
+  ],
+  "cpu1_excluded": true,
+  "seed": 126999,
+  "bootstrap_reps": 50000,
+  "maximum_observed_absolute_difference": 8.326672684688674e-17,
+  "all_different_seed_primary_cis_cross_zero": true,
+  "conclusion": "No-temporal-direction verdict is already forced by the bird-bootstrap gate"
+}

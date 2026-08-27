@@ -1,0 +1,19 @@
+{
+  "status": "D106_FORMAL_V1_AUDIT_PASS",
+  "independent_seed": 1060826,
+  "independent_bootstrap_reps": 20000,
+  "affinity": [
+    10
+  ],
+  "events": 5273,
+  "maximum_E_minus_R_minus_L_error": 2.220446049250313e-16,
+  "maximum_observed_point_difference": 1.6653345369377348e-16,
+  "group_holm_error": 0.0,
+  "modifier_holm_error": 0.0,
+  "all_four_modifier_CIs_block_primary_pass": true,
+  "negative_verdict_does_not_depend_on_phase_p": true,
+  "formal_summary_sha256": "e292e5dbe4cbbcb3ba206774652f63db56b5f17cad2a172de2b187ce9ac3427f",
+  "formal_groups_sha256": "b2f6d73f546ecfaa3baa6cba6edc89b52618ebc82abfc88a640c1c699867b4de",
+  "formal_modifiers_sha256": "40e2513d34357ac6eab825a838b7d778746224d7ab990d2d7e3034e82cfa1989",
+  "audit_script_sha256": "e51dfd60d6ac6d09b988fadd910e6d4cd1630028457007f4bad537f5656b3503"
+}

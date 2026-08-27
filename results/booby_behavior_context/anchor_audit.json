@@ -1,0 +1,10 @@
+{
+  "reconstructed_events": 5273,
+  "frozen_events": 5273,
+  "exact_event_join": true,
+  "metadata_mismatch": 0,
+  "maximum_metric_difference": 1.1102230246251565e-16,
+  "maximum_E_minus_R_minus_L_error": 1.1102230246251565e-16,
+  "reconstruction_audit_rows": 10647,
+  "validate_only": false
+}

@@ -1,0 +1,48 @@
+column,dtype,unit,description,files
+C_high,float64,field-specific,Frozen analysis field: C high.,family_b_event_metrics.csv.gz
+C_low,float64,field-specific,Frozen analysis field: C low.,family_b_event_metrics.csv.gz
+C_union,float64,field-specific,Frozen analysis field: C union.,family_b_event_metrics.csv.gz
+E_high,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+E_low,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+E_union,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+L_high,float64,probability contrast,Last-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+L_low,float64,probability contrast,Last-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+L_union,float64,probability contrast,Last-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+R_high,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+R_low,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+R_union,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,family_a_event_metrics.csv.gz
+a_chl_eligible,int64,field-specific,Chlorophyll-a-derived quantity denoted by `a_chl_eligible`; log fields use natural logarithms and rank fields are within-event fractions.,coverage.csv
+a_decomposition_eligible,int64,field-specific,Frozen analysis field: a decomposition eligible.,coverage.csv
+b_chl_eligible,int64,field-specific,Chlorophyll-a-derived quantity denoted by `b_chl_eligible`; log fields use natural logarithms and rank fields are within-event fractions.,coverage.csv
+bootstrap_ci_high,float64,see description,Upper endpoint of the 95% biological-unit-cluster bootstrap interval.,formal_summary.csv
+bootstrap_ci_low,float64,see description,Lower endpoint of the 95% biological-unit-cluster bootstrap interval.,formal_summary.csv
+bootstrap_reps,int64,field-specific,Frozen analysis field: bootstrap reps.,formal_summary.csv
+cluster,object,field-specific,Frozen analysis field: cluster.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+dataset,object,see description,Short analysis-system identifier.,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
+estimand,object,see description,Name of the reported statistical quantity.,formal_summary.csv
+event_id,object,see description,Stable identifier for one movement event within its source trajectory.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+events,int64,see description,Number of qualified event-scale rows contributing to the estimate.,formal_summary.csv
+family,object,see description,Analysis family: decomposition (A) or rho-tau localisation (B).,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
+frozen_events,int64,field-specific,Frozen analysis field: frozen events.,coverage.csv
+geometry_pass,int64,field-specific,Frozen analysis field: geometry pass.,coverage.csv
+holm_phase_p,float64,see description,Holm-adjusted one-sided phase-randomisation P value.,formal_summary.csv
+n_record_runs,int64,count,Count of n record runs.,family_a_event_metrics.csv.gz
+n_runs,int64,count,Count of n runs.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+observed_unit_equal,float64,see description,Observed estimate after equal weighting of biological units.,formal_summary.csv
+phase_null_mean,float64,see description,Mean estimate across structure-preserving circular-phase null replicates.,formal_summary.csv
+phase_p_one_sided,float64,probability,Randomisation or adjusted probability value for the named comparison.,formal_summary.csv
+phase_reps,int64,probability,Randomisation or adjusted probability value for the named comparison.,formal_summary.csv
+positive_support,bool,AIC units or correlation,Model-support quantity denoted by positive support; positive relative support favours Lomax over exponential.,formal_summary.csv
+rho_high,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_high`).,family_b_event_metrics.csv.gz
+rho_low,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_low`).,family_b_event_metrics.csv.gz
+rho_run,int64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_run`).,family_b_event_metrics.csv.gz
+rho_tau_distinct_cell,bool; float64; int64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_tau_distinct_cell`).,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+rho_tau_distinct_cell_fraction,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_tau_distinct_cell_fraction`).,coverage.csv; formal_summary.csv
+rho_union,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_union`).,family_b_event_metrics.csv.gz
+scale_m,int64,m,Radial-drawdown scale in metres.,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
+segment_key,object,field-specific,Frozen analysis field: segment key.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+segments,int64,count,Count of segments.,formal_summary.csv
+tau_high,float64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_high`).,family_b_event_metrics.csv.gz
+tau_low,float64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_low`).,family_b_event_metrics.csv.gz
+tau_union,float64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_union`).,family_b_event_metrics.csv.gz
+units,int64,see description,Number of biological sampling units contributing to the estimate.,formal_summary.csv

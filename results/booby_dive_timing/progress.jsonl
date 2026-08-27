@@ -1,0 +1,64 @@
+{"stage": "start", "completed": 0, "total": 1, "percent": 0.0, "elapsed_s": 0.0, "eta_s": 0.0, "affinity": [2], "smoke": false}
+{"stage": "rfbo_reconstruct", "completed": 50, "total": 652, "percent": 7.669, "elapsed_s": 2.506, "eta_s": 30.168, "a_events": 354, "b_events": 502}
+{"stage": "rfbo_reconstruct", "completed": 100, "total": 652, "percent": 15.337, "elapsed_s": 2.834, "eta_s": 15.642, "a_events": 661, "b_events": 922}
+{"stage": "rfbo_reconstruct", "completed": 150, "total": 652, "percent": 23.006, "elapsed_s": 3.599, "eta_s": 12.046, "a_events": 1387, "b_events": 1873}
+{"stage": "rfbo_reconstruct", "completed": 200, "total": 652, "percent": 30.675, "elapsed_s": 4.302, "eta_s": 9.721, "a_events": 2064, "b_events": 2742}
+{"stage": "rfbo_reconstruct", "completed": 250, "total": 652, "percent": 38.344, "elapsed_s": 4.645, "eta_s": 7.469, "a_events": 2352, "b_events": 3165}
+{"stage": "rfbo_reconstruct", "completed": 300, "total": 652, "percent": 46.012, "elapsed_s": 5.109, "eta_s": 5.994, "a_events": 2730, "b_events": 3653}
+{"stage": "rfbo_reconstruct", "completed": 350, "total": 652, "percent": 53.681, "elapsed_s": 5.923, "eta_s": 5.111, "a_events": 3485, "b_events": 4608}
+{"stage": "rfbo_reconstruct", "completed": 400, "total": 652, "percent": 61.35, "elapsed_s": 6.258, "eta_s": 3.942, "a_events": 3719, "b_events": 4981}
+{"stage": "rfbo_reconstruct", "completed": 450, "total": 652, "percent": 69.018, "elapsed_s": 6.568, "eta_s": 2.948, "a_events": 3952, "b_events": 5298}
+{"stage": "rfbo_reconstruct", "completed": 500, "total": 652, "percent": 76.687, "elapsed_s": 7.294, "eta_s": 2.217, "a_events": 4541, "b_events": 6061}
+{"stage": "rfbo_reconstruct", "completed": 550, "total": 652, "percent": 84.356, "elapsed_s": 7.612, "eta_s": 1.412, "a_events": 4718, "b_events": 6355}
+{"stage": "rfbo_reconstruct", "completed": 600, "total": 652, "percent": 92.025, "elapsed_s": 7.868, "eta_s": 0.682, "a_events": 4864, "b_events": 6559}
+{"stage": "rfbo_reconstruct", "completed": 650, "total": 652, "percent": 99.693, "elapsed_s": 8.5, "eta_s": 0.026, "a_events": 5253, "b_events": 7072}
+{"stage": "rfbo_reconstruct", "completed": 652, "total": 652, "percent": 100.0, "elapsed_s": 8.527, "eta_s": 0.0, "a_events": 5273, "b_events": 7096}
+{"stage": "phase_250", "completed": 15, "total": 157, "percent": 9.554, "elapsed_s": 9.341, "eta_s": 88.432, "events": 1914}
+{"stage": "phase_250", "completed": 30, "total": 157, "percent": 19.108, "elapsed_s": 9.943, "eta_s": 42.091, "events": 1914}
+{"stage": "phase_250", "completed": 45, "total": 157, "percent": 28.662, "elapsed_s": 10.506, "eta_s": 26.149, "events": 1914}
+{"stage": "phase_250", "completed": 60, "total": 157, "percent": 38.217, "elapsed_s": 10.982, "eta_s": 17.754, "events": 1914}
+{"stage": "phase_250", "completed": 75, "total": 157, "percent": 47.771, "elapsed_s": 11.666, "eta_s": 12.755, "events": 1914}
+{"stage": "phase_250", "completed": 90, "total": 157, "percent": 57.325, "elapsed_s": 12.023, "eta_s": 8.95, "events": 1914}
+{"stage": "phase_250", "completed": 105, "total": 157, "percent": 66.879, "elapsed_s": 13.536, "eta_s": 6.703, "events": 1914}
+{"stage": "phase_250", "completed": 120, "total": 157, "percent": 76.433, "elapsed_s": 15.531, "eta_s": 4.789, "events": 1914}
+{"stage": "phase_250", "completed": 135, "total": 157, "percent": 85.987, "elapsed_s": 20.551, "eta_s": 3.349, "events": 1914}
+{"stage": "phase_250", "completed": 150, "total": 157, "percent": 95.541, "elapsed_s": 23.919, "eta_s": 1.116, "events": 1914}
+{"stage": "phase_250", "completed": 157, "total": 157, "percent": 100.0, "elapsed_s": 25.174, "eta_s": 0.0, "events": 1914}
+{"stage": "scale_complete", "completed": 1, "total": 4, "percent": 25.0, "elapsed_s": 25.321, "eta_s": 75.964, "scale_m": 250}
+{"stage": "phase_500", "completed": 15, "total": 151, "percent": 9.934, "elapsed_s": 25.884, "eta_s": 234.677, "events": 1552}
+{"stage": "phase_500", "completed": 30, "total": 151, "percent": 19.868, "elapsed_s": 26.288, "eta_s": 106.028, "events": 1552}
+{"stage": "phase_500", "completed": 45, "total": 151, "percent": 29.801, "elapsed_s": 26.901, "eta_s": 63.367, "events": 1552}
+{"stage": "phase_500", "completed": 60, "total": 151, "percent": 39.735, "elapsed_s": 27.223, "eta_s": 41.289, "events": 1552}
+{"stage": "phase_500", "completed": 75, "total": 151, "percent": 49.669, "elapsed_s": 27.646, "eta_s": 28.015, "events": 1552}
+{"stage": "phase_500", "completed": 90, "total": 151, "percent": 59.603, "elapsed_s": 28.045, "eta_s": 19.008, "events": 1552}
+{"stage": "phase_500", "completed": 105, "total": 151, "percent": 69.536, "elapsed_s": 29.487, "eta_s": 12.918, "events": 1552}
+{"stage": "phase_500", "completed": 120, "total": 151, "percent": 79.47, "elapsed_s": 32.186, "eta_s": 8.315, "events": 1552}
+{"stage": "phase_500", "completed": 135, "total": 151, "percent": 89.404, "elapsed_s": 35.432, "eta_s": 4.199, "events": 1552}
+{"stage": "phase_500", "completed": 150, "total": 151, "percent": 99.338, "elapsed_s": 38.275, "eta_s": 0.255, "events": 1552}
+{"stage": "phase_500", "completed": 151, "total": 151, "percent": 100.0, "elapsed_s": 38.338, "eta_s": 0.0, "events": 1552}
+{"stage": "scale_complete", "completed": 2, "total": 4, "percent": 50.0, "elapsed_s": 38.794, "eta_s": 38.794, "scale_m": 500}
+{"stage": "phase_1000", "completed": 14, "total": 143, "percent": 9.79, "elapsed_s": 39.129, "eta_s": 360.549, "events": 1119}
+{"stage": "phase_1000", "completed": 28, "total": 143, "percent": 19.58, "elapsed_s": 39.364, "eta_s": 161.676, "events": 1119}
+{"stage": "phase_1000", "completed": 42, "total": 143, "percent": 29.371, "elapsed_s": 39.759, "eta_s": 95.611, "events": 1119}
+{"stage": "phase_1000", "completed": 56, "total": 143, "percent": 39.161, "elapsed_s": 40.002, "eta_s": 62.146, "events": 1119}
+{"stage": "phase_1000", "completed": 70, "total": 143, "percent": 48.951, "elapsed_s": 40.396, "eta_s": 42.127, "events": 1119}
+{"stage": "phase_1000", "completed": 84, "total": 143, "percent": 58.741, "elapsed_s": 40.651, "eta_s": 28.552, "events": 1119}
+{"stage": "phase_1000", "completed": 98, "total": 143, "percent": 68.531, "elapsed_s": 41.587, "eta_s": 19.096, "events": 1119}
+{"stage": "phase_1000", "completed": 112, "total": 143, "percent": 78.322, "elapsed_s": 43.156, "eta_s": 11.945, "events": 1119}
+{"stage": "phase_1000", "completed": 126, "total": 143, "percent": 88.112, "elapsed_s": 45.455, "eta_s": 6.133, "events": 1119}
+{"stage": "phase_1000", "completed": 140, "total": 143, "percent": 97.902, "elapsed_s": 47.129, "eta_s": 1.01, "events": 1119}
+{"stage": "phase_1000", "completed": 143, "total": 143, "percent": 100.0, "elapsed_s": 47.635, "eta_s": 0.0, "events": 1119}
+{"stage": "scale_complete", "completed": 3, "total": 4, "percent": 75.0, "elapsed_s": 48.31, "eta_s": 16.103, "scale_m": 1000}
+{"stage": "phase_2000", "completed": 13, "total": 133, "percent": 9.774, "elapsed_s": 48.489, "eta_s": 447.593, "events": 688}
+{"stage": "phase_2000", "completed": 26, "total": 133, "percent": 19.549, "elapsed_s": 48.59, "eta_s": 199.966, "events": 688}
+{"stage": "phase_2000", "completed": 39, "total": 133, "percent": 29.323, "elapsed_s": 48.772, "eta_s": 117.552, "events": 688}
+{"stage": "phase_2000", "completed": 52, "total": 133, "percent": 39.098, "elapsed_s": 48.92, "eta_s": 76.202, "events": 688}
+{"stage": "phase_2000", "completed": 65, "total": 133, "percent": 48.872, "elapsed_s": 49.194, "eta_s": 51.464, "events": 688}
+{"stage": "phase_2000", "completed": 78, "total": 133, "percent": 58.647, "elapsed_s": 49.454, "eta_s": 34.871, "events": 688}
+{"stage": "phase_2000", "completed": 91, "total": 133, "percent": 68.421, "elapsed_s": 49.757, "eta_s": 22.965, "events": 688}
+{"stage": "phase_2000", "completed": 104, "total": 133, "percent": 78.195, "elapsed_s": 50.563, "eta_s": 14.099, "events": 688}
+{"stage": "phase_2000", "completed": 117, "total": 133, "percent": 87.97, "elapsed_s": 52.118, "eta_s": 7.127, "events": 688}
+{"stage": "phase_2000", "completed": 130, "total": 133, "percent": 97.744, "elapsed_s": 53.22, "eta_s": 1.228, "events": 688}
+{"stage": "phase_2000", "completed": 133, "total": 133, "percent": 100.0, "elapsed_s": 53.56, "eta_s": 0.0, "events": 688}
+{"stage": "scale_complete", "completed": 4, "total": 4, "percent": 100.0, "elapsed_s": 53.663, "eta_s": 0.0, "scale_m": 2000}
+{"stage": "complete", "completed": 1, "total": 1, "percent": 100.0, "elapsed_s": 53.669, "eta_s": 0.0, "verdict": "NO_TEMPORAL_DIRECTION_SPECIFICITY"}

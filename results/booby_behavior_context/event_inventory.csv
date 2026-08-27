@@ -1,0 +1,13 @@
+scale_m,behavior_class,events,birds,segments,paired_dive_wet_birds,paired_dive_no_tdr_birds
+250,dive_near,470,90,106,88,88
+250,no_tdr_near,713,106,140,88,88
+250,wet_only_near,731,92,114,88,88
+500,dive_near,366,86,102,82,78
+500,no_tdr_near,573,100,129,82,78
+500,wet_only_near,613,89,109,82,78
+1000,dive_near,247,78,93,72,68
+1000,no_tdr_near,417,93,118,72,68
+1000,wet_only_near,455,82,100,72,68
+2000,dive_near,154,68,79,61,54
+2000,no_tdr_near,276,81,101,61,54
+2000,wet_only_near,258,79,92,61,54

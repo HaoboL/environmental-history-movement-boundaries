@@ -1,0 +1,79 @@
+{
+  "status": "FORMAL_COMPLETE",
+  "verdict": "MACRO_BOUNDARY_PLACEMENT_UPGRADE_GATE_FAILED",
+  "gate_pass": false,
+  "rho": {
+    "rho_chl_support": -0.1718805903398927,
+    "rho_chl_support_ci_low": -0.33054052457624683,
+    "rho_chl_support_ci_high": -0.007214842327339324,
+    "rho_chl_median_log_length": -0.0653007602862254,
+    "rho_chl_median_log_length_ci_low": -0.2285473749832904,
+    "rho_chl_median_log_length_ci_high": 0.1013565734477052,
+    "bootstrap_reps": 20000
+  },
+  "tau_overlapping_confirmation_reach_diagnostic": {
+    "rho_chl_support": -0.16840898926654743,
+    "rho_chl_support_ci_low": -0.325606018676628,
+    "rho_chl_support_ci_high": -0.002289219734988836,
+    "rho_chl_median_log_length": -0.07190295169946334,
+    "rho_chl_median_log_length_ci_low": -0.23536886730905937,
+    "rho_chl_median_log_length_ci_high": 0.09494421010482057,
+    "bootstrap_reps": 20000
+  },
+  "eligible_record_counterfactual": {
+    "rho_chl_support": {
+      "q025": -0.16225039132379251,
+      "median": -0.1441245527728086,
+      "q975": -0.12455724508050092,
+      "rho_observed": -0.1718805903398927,
+      "one_sided_p_rho_more_negative": 0.004
+    },
+    "rho_chl_median_log_length": {
+      "q025": -0.14001621198568875,
+      "median": -0.11128689624329162,
+      "q975": -0.08450553443649376,
+      "rho_observed": -0.0653007602862254,
+      "one_sided_p_rho_more_negative": 0.999
+    }
+  },
+  "gates": {
+    "rho_primary": false,
+    "record_both_more_negative": false,
+    "record_at_least_one_p_le_025": true,
+    "anchors": true
+  },
+  "invariant": "Event count is identical under rho and eligible-record boundaries; renewal density is therefore unchanged by construction and was not tested as a boundary-placement consequence. Tau marks overlap/cross and are not a renewal partition.",
+  "anchor_max_coordinate_error_km": 2.7844393457598926e-12,
+  "anchor_max_support_error": 1.3723990832659183e-09,
+  "segments": 129,
+  "tracks": 129,
+  "record_reps": 999,
+  "workers": 16,
+  "affinity": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "cpu1_excluded": true,
+  "input_sha256": {
+    "codex_runs/wa_canonical_levy_window_endpointfix_chl_20260606_directcopy_mixedtime_full/03_canonical_events.csv": "400b3167363dd41c91df22daa0be4d03f105a710b6842d1b6bdcfebef0c70052",
+    "PAPER2_ALBATROSS_ECOLOGY/PAPER2_ARTICLE_DRAWDOWN_SCALE_SENSITIVITY_V1/input_cache_corrected_v1/goto_canonical_windows_continuous_dense_chl.csv.gz": "fa24b18fea7d7fd7e1f424d895b2c41b9a1e25766492f571fe4c85e345e9ae32",
+    "PAPER2_ALBATROSS_ECOLOGY/TWO_SIDED_COX_RENEWAL_VALIDATION_V1/formal_v3_analytic_envfit/segment_rate_tail_metrics.csv": "f41120760e9566a4ac899c048014e0e35f6b427c44d5a02cc311ee8a1d062392",
+    "NODE_STATE/D128_BOUNDARY_PLACEMENT_MACRO_COUNTERFACTUAL_PREREG_20260826_CN.md": "ca77311071688ca23e160f007285b7bfa43223157135745e78ddc126c1803394"
+  },
+  "script_sha256": "ed0869702d3812f6dd5a0f4bb3eef25aa257f59e8e41185d35a0b894be09605a",
+  "interpretation_limit": "Statistical boundary-placement counterfactual; not an online animal rule, causal intervention, or test of renewal density."
+}

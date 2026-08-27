@@ -1,0 +1,5 @@
+scale_m,predictor,estimand,events,individuals,individual_equal_slope,bootstrap_ci_low,bootstrap_ci_high,phase_null_mean,phase_p_raw,holm_family,phase_p_holm,coverage_pass,pass
+500,future_specificity,L_union,74,7,0.26109854256014886,-0.011293011654636507,0.558095338176359,0.001049698084673295,0.042,primary_future_specificity_L_union_4_scales,0.136,True,False
+1000,future_specificity,L_union,70,7,0.2892707178307827,-0.02211909366360998,0.6167078944588381,-0.003439793046861093,0.034,primary_future_specificity_L_union_4_scales,0.136,True,False
+2000,future_specificity,L_union,62,7,0.0978081571588627,-0.22986639743803555,0.36653605370669873,0.003825428563447262,0.313,primary_future_specificity_L_union_4_scales,0.626,True,False
+5000,future_specificity,L_union,35,6,0.08804126165115228,-0.4929657736607454,0.9599957592530268,-0.050119825490207416,0.424,primary_future_specificity_L_union_4_scales,0.626,True,False

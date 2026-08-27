@@ -1,0 +1,53 @@
+figure,dataset,scale_m,n_events,n_units,bootstrap_reps,panel,record_type,series,x_category,y_category,estimate,ci_low,ci_high,positive_cells,estimable_cells
+Main Figure 3,goto,100,11558,146,20000,a,joint model coefficient,absolute CHL,,,-0.0664634687322408,-0.0998978769645045,-0.0334714618206864,,
+Main Figure 3,goto,100,11558,146,20000,a,joint model coefficient,L_low,,,0.2951568548253722,0.2433266073221708,0.3484478327005072,,
+Main Figure 3,goto,100,11558,146,20000,a,joint model coefficient,L_high,,,0.0726375538922073,0.0326965282626171,0.1138819988328304,,
+Main Figure 3,goto,100,11558,146,20000,b,cell-standardised mean,L_union,,,0.2292793726595256,0.2155486070224682,0.2432261199521797,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,a,joint model coefficient,absolute CHL,,,-0.1982674452726585,-0.2497580827429643,-0.1437779991071264,,
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,a,joint model coefficient,L_low,,,0.3936862239949612,0.3042318292640827,0.4802330965757965,,
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,a,joint model coefficient,L_high,,,0.1820034331628904,0.1277131864608345,0.2379218389907796,,
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,b,cell-standardised mean,L_union,,,0.1541317990972924,0.1347388113093208,0.1732733386209453,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,a,joint model coefficient,absolute CHL,,,-0.2176452489120208,-0.2681080333911838,-0.1636957779728167,,
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,a,joint model coefficient,L_low,,,0.3319365322026699,0.2435868321968602,0.41315934989574,,
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,a,joint model coefficient,L_high,,,0.1769226353064256,0.0980603657406173,0.252388124423532,,
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,b,cell-standardised mean,L_union,,,0.146626040842503,0.1298438264289171,0.1630108808296132,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,a,joint model coefficient,absolute CHL,,,-0.2009595394955992,-0.2501410625698476,-0.1480869114455503,,
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,a,joint model coefficient,L_low,,,0.383272083041848,0.2732911017755985,0.497606145424477,,
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,a,joint model coefficient,L_high,,,0.2198801228408513,0.0977137609557476,0.3432828956010996,,
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,b,cell-standardised mean,L_union,,,0.1525538718833421,0.1297846111328577,0.1748075863848928,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,low,short,0.181460235417211,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,low,mid,0.260743981354714,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,low,long,0.2802347367192594,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,mid,short,0.1581341027437607,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,mid,mid,0.2766770987009756,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,mid,long,0.2835143835825097,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,high,short,0.147234492353727,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,high,mid,0.2481137245306575,,,9.0,9.0
+Main Figure 3,goto,100,11558,146,20000,c,conditional tertile cell,L_union,high,long,0.2313893654237145,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,low,short,0.0605292490642218,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,low,mid,0.1830342050740752,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,low,long,0.2082757732554554,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,mid,short,0.0392416011053419,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,mid,mid,0.1773613212963239,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,mid,long,0.2327263930440491,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,high,short,0.1033445712746271,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,high,mid,0.1676964613838074,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,500,4242,34,20000,d,conditional tertile cell,L_union,high,long,0.2149766163777298,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,low,short,0.0449017587891589,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,low,mid,0.1680407995851126,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,low,long,0.1759182750203049,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,mid,short,0.0448448432194451,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,mid,mid,0.1916680601667809,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,mid,long,0.2543953554625016,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,high,short,0.1003007660550008,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,high,mid,0.1329081004143174,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,1000,3573,34,20000,e,conditional tertile cell,L_union,high,long,0.2035407537762974,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,low,short,0.0207266553011579,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,low,mid,0.215574925608188,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,low,long,0.2185917109238473,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,mid,short,0.0343492433100471,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,mid,mid,0.2031899269750027,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,mid,long,0.232468611455006,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,high,short,0.1099308254115639,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,high,mid,0.133444688057664,,,9.0,9.0
+Main Figure 3,usgs_laysan_albatross,2000,2757,34,20000,f,conditional tertile cell,L_union,high,long,0.212390494738218,,,9.0,9.0

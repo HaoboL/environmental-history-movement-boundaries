@@ -1,0 +1,96 @@
+column,dtype,unit,description,files
+E_high,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+E_low,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+E_union,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+L_high,float64,probability contrast,Last-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+L_low,float64,probability contrast,Last-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+L_union,float64,probability contrast,Last-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+R_high,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+R_low,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+R_union,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,shearwater_event_metrics.csv.gz
+actual_diff,float64,field-specific,Frozen analysis field: actual diff.,wandering_albatross_landing_scale_summary.csv
+actual_post,float64,field-specific,Frozen analysis field: actual post.,wandering_albatross_landing_scale_summary.csv
+actual_pre,float64,field-specific,Frozen analysis field: actual pre.,wandering_albatross_landing_scale_summary.csv
+behavior_class,object,field-specific,Frozen analysis field: behavior class.,red_footed_booby_behavior_group_effects.csv; shearwater_event_metrics.csv.gz
+behavior_group,object,field-specific,Frozen analysis field: behavior group.,shearwater_behavior_group_effects.csv
+bin_high_s,int64,seconds unless stated,Time or lag quantity denoted by bin high s.,wandering_albatross_landing_timing_summary.csv
+bin_low_s,int64,seconds unless stated,Time or lag quantity denoted by bin low s.,wandering_albatross_landing_timing_summary.csv
+birds,int64,see description,Number of birds contributing to the estimate.,red_footed_booby_behavior_group_effects.csv; wandering_albatross_landing_scale_summary.csv; wandering_albatross_landing_timing_summary.csv
+bootstrap_ci_high,float64,see description,Upper endpoint of the 95% biological-unit-cluster bootstrap interval.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+bootstrap_ci_low,float64,see description,Lower endpoint of the 95% biological-unit-cluster bootstrap interval.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+bootstrap_reps,int64,field-specific,Frozen analysis field: bootstrap reps.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+ci_high,float64,field-specific,Frozen analysis field: ci high.,wandering_albatross_landing_timing_summary.csv
+ci_low,float64,field-specific,Frozen analysis field: ci low.,wandering_albatross_landing_timing_summary.csv
+component,object,field-specific,Frozen analysis field: component.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+contrast,object,estimate units,Statistical estimate denoted by contrast.,red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+coverage_gate,bool,field-specific,Frozen analysis field: coverage gate.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+coverage_pass,bool,field-specific,Frozen analysis field: coverage pass.,shearwater_continuous_context_contrast.csv
+dataset,object,see description,Short analysis-system identifier.,shearwater_event_metrics.csv.gz
+delta_m,int64,m,Radial-drawdown scale in metres.,wandering_albatross_landing_scale_summary.csv; wandering_albatross_landing_timing_summary.csv
+deployment,object,field-specific,Frozen analysis field: deployment.,shearwater_event_metrics.csv.gz
+direction_pass,bool,field-specific,Frozen analysis field: direction pass.,wandering_albatross_landing_scale_summary.csv
+endpoint_index_support_run,int64,AIC units or correlation,Model-support quantity denoted by endpoint index support run; positive relative support favours Lomax over exponential.,shearwater_event_metrics.csv.gz
+estimand,object,see description,Name of the reported statistical quantity.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+event_id,object,see description,Stable identifier for one movement event within its source trajectory.,shearwater_event_metrics.csv.gz
+events,int64,see description,Number of qualified event-scale rows contributing to the estimate.,red_footed_booby_behavior_group_effects.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv; wandering_albatross_landing_scale_summary.csv; wandering_albatross_landing_timing_summary.csv
+future_forage,float64,field-specific,Frozen analysis field: future forage.,shearwater_event_metrics.csv.gz
+future_minus_prior_specificity,float64,field-specific,Frozen analysis field: future minus prior specificity.,shearwater_event_metrics.csv.gz
+future_rest,float64,field-specific,Frozen analysis field: future rest.,shearwater_event_metrics.csv.gz
+future_specificity,float64,field-specific,Frozen analysis field: future specificity.,shearwater_event_metrics.csv.gz
+holm15_direction_p,float64,probability,Randomisation or adjusted probability value for the named comparison.,wandering_albatross_landing_scale_summary.csv
+holm30_post_p,float64,probability,Randomisation or adjusted probability value for the named comparison.,wandering_albatross_landing_scale_summary.csv
+holm30_pre_p,float64,probability,Randomisation or adjusted probability value for the named comparison.,wandering_albatross_landing_scale_summary.csv
+holm_family,object,field-specific,Frozen analysis field: holm family.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+holm_phase_p,float64,see description,Holm-adjusted one-sided phase-randomisation P value.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+individual,int64,field-specific,Frozen analysis field: individual.,shearwater_event_metrics.csv.gz
+individual_equal_mean,float64,field-specific,Frozen analysis field: individual equal mean.,shearwater_behavior_group_effects.csv
+individual_equal_slope,float64,estimate units,Statistical estimate denoted by individual equal slope.,shearwater_continuous_context_contrast.csv
+individuals,int64,see description,Number of individuals contributing to the estimate.,shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+left,object,field-specific,Frozen analysis field: left.,red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+left_events,int64,field-specific,Frozen analysis field: left events.,red_footed_booby_dive_timing_contrasts.csv
+n_native_cell_runs,int64,count,Count of n native cell runs.,shearwater_event_metrics.csv.gz
+n_record_cell_runs,int64,count,Count of n record cell runs.,shearwater_event_metrics.csv.gz
+null_diff_mean,float64,field-specific,Frozen analysis field: null diff mean.,wandering_albatross_landing_scale_summary.csv
+null_post_mean,float64,field-specific,Frozen analysis field: null post mean.,wandering_albatross_landing_scale_summary.csv
+null_pre_mean,float64,field-specific,Frozen analysis field: null pre mean.,wandering_albatross_landing_scale_summary.csv
+observed_unit_equal,float64,see description,Observed estimate after equal weighting of biological units.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+origin_index_support_run,int64,AIC units or correlation,Model-support quantity denoted by origin index support run; positive relative support favours Lomax over exponential.,shearwater_event_metrics.csv.gz
+p_diff_upper,float64,field-specific,Frozen analysis field: p diff upper.,wandering_albatross_landing_scale_summary.csv
+p_post_upper,float64,field-specific,Frozen analysis field: p post upper.,wandering_albatross_landing_scale_summary.csv
+p_pre_upper,float64,field-specific,Frozen analysis field: p pre upper.,wandering_albatross_landing_scale_summary.csv
+paired_birds,int64,field-specific,Frozen analysis field: paired birds.,red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+pass,bool,field-specific,Frozen analysis field: pass.,shearwater_continuous_context_contrast.csv
+phase_null_mean,float64,see description,Mean estimate across structure-preserving circular-phase null replicates.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+phase_p_holm,float64,probability,Randomisation or adjusted probability value for the named comparison.,shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+phase_p_one_sided,float64,probability,Randomisation or adjusted probability value for the named comparison.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv
+phase_p_raw,float64,probability,Randomisation or adjusted probability value for the named comparison.,shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv
+phase_p_two_sided,float64,probability,Randomisation or adjusted probability value for the named comparison.,red_footed_booby_dive_timing_contrasts.csv
+phase_reps,int64,probability,Randomisation or adjusted probability value for the named comparison.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+post_bird_equal,float64,field-specific,Frozen analysis field: post bird equal.,wandering_albatross_landing_timing_summary.csv
+post_events,int64,field-specific,Frozen analysis field: post events.,wandering_albatross_landing_scale_summary.csv
+post_minus_pre,float64,field-specific,Frozen analysis field: post minus pre.,wandering_albatross_landing_timing_summary.csv
+post_side_pass,bool,field-specific,Frozen analysis field: post side pass.,wandering_albatross_landing_scale_summary.csv
+pre_bird_equal,float64,field-specific,Frozen analysis field: pre bird equal.,wandering_albatross_landing_timing_summary.csv
+pre_events,int64,field-specific,Frozen analysis field: pre events.,wandering_albatross_landing_scale_summary.csv
+pre_side_pass,bool,field-specific,Frozen analysis field: pre side pass.,wandering_albatross_landing_scale_summary.csv
+predictor,object,field-specific,Frozen analysis field: predictor.,shearwater_continuous_context_contrast.csv
+primary_pass,bool,field-specific,Frozen analysis field: primary pass.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+prior_forage,float64,field-specific,Frozen analysis field: prior forage.,shearwater_event_metrics.csv.gz
+prior_rest,float64,field-specific,Frozen analysis field: prior rest.,shearwater_event_metrics.csv.gz
+prior_specificity,float64,field-specific,Frozen analysis field: prior specificity.,shearwater_event_metrics.csv.gz
+raw_diff_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+raw_diff_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_diff,float64,field-specific,Frozen analysis field: resid diff.,wandering_albatross_landing_scale_summary.csv
+resid_diff_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_diff_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_post,float64,field-specific,Frozen analysis field: resid post.,wandering_albatross_landing_scale_summary.csv
+resid_post_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_post_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_pre,float64,field-specific,Frozen analysis field: resid pre.,wandering_albatross_landing_scale_summary.csv
+resid_pre_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+resid_pre_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,wandering_albatross_landing_scale_summary.csv
+right,object,field-specific,Frozen analysis field: right.,red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv
+right_events,int64,field-specific,Frozen analysis field: right events.,red_footed_booby_dive_timing_contrasts.csv
+run_key,object,field-specific,Frozen analysis field: run key.,shearwater_event_metrics.csv.gz
+scale_m,int64,m,Radial-drawdown scale in metres.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv; shearwater_behavior_group_effects.csv; shearwater_continuous_context_contrast.csv; shearwater_event_metrics.csv.gz
+tail,object,field-specific,Frozen analysis field: tail.,red_footed_booby_behavior_group_effects.csv; red_footed_booby_behavior_modifiers.csv; red_footed_booby_dive_timing_contrasts.csv

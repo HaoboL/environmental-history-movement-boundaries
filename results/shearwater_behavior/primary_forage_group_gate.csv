@@ -1,0 +1,5 @@
+scale_m,behavior_group,estimand,events,individuals,individual_equal_mean,bootstrap_ci_low,bootstrap_ci_high,phase_null_mean,phase_p_raw,holm_family,phase_p_holm,coverage_pass,pass
+500,forage_dominant,L_union,35,9,0.3563681926903409,0.21218420468420465,0.5004235150576615,0.08031690523758225,0.003,primary_forage_dominant_L_union_4_scales,0.012,True,True
+1000,forage_dominant,L_union,34,8,0.33497565385146344,0.18770882542233472,0.48487540364445847,0.050622157403261175,0.005,primary_forage_dominant_L_union_4_scales,0.015,True,True
+2000,forage_dominant,L_union,32,8,0.293344261175816,0.11578826251873127,0.4713782423538521,0.04498483465116258,0.009,primary_forage_dominant_L_union_4_scales,0.018,True,True
+5000,forage_dominant,L_union,18,8,0.19894026851814692,-0.003282802528453546,0.3978030687977334,0.04620589411324507,0.118,primary_forage_dominant_L_union_4_scales,0.118,True,False

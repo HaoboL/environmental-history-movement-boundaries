@@ -1,0 +1,62 @@
+column,dtype,unit,description,files
+E_high,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+E_low,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+E_union,float64,probability contrast,Endpoint-excess quantity for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+L_high,float64,probability contrast,Last-record component for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+L_low,float64,probability contrast,Last-record component for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+L_low_positive,bool,probability contrast,Last-record component for the tail named in the column suffix.,joint_model_summary.csv
+L_low_strict,bool,probability contrast,Last-record component for the tail named in the column suffix.,joint_model_summary.csv
+L_union,float64,probability contrast,Last-record component for the tail named in the column suffix.,conditional_L_3x3_grid.csv; laysan_last_passage_event_metrics.csv.gz
+R_high,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+R_low,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+R_union,float64,probability contrast,Ordinary radial-record component for the tail named in the column suffix.,laysan_last_passage_event_metrics.csv.gz
+abs_tertile,int64,field-specific,Frozen analysis field: abs tertile.,conditional_L_3x3_grid.csv
+absolute_pass,bool,field-specific,Frozen analysis field: absolute pass.,joint_model_summary.csv
+animals,int64,field-specific,Frozen analysis field: animals.,joint_model_summary.csv
+attempted_unique_offsets,int64,field-specific,Frozen analysis field: attempted unique offsets.,laysan_phase_null_audit.csv.gz
+beta_L_high,float64,field-specific,Frozen analysis field: beta L high.,joint_model_summary.csv
+beta_L_high_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+beta_L_high_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+beta_L_low,float64,field-specific,Frozen analysis field: beta L low.,joint_model_summary.csv
+beta_L_low_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+beta_L_low_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+beta_absolute,float64,field-specific,Frozen analysis field: beta absolute.,joint_model_summary.csv
+beta_absolute_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+beta_absolute_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+bootstrap_ci_high,float64,see description,Upper endpoint of the 95% biological-unit-cluster bootstrap interval.,laysan_phase_summary.csv
+bootstrap_ci_low,float64,see description,Lower endpoint of the 95% biological-unit-cluster bootstrap interval.,laysan_phase_summary.csv
+bootstrap_reps,int64,field-specific,Frozen analysis field: bootstrap reps.,joint_model_summary.csv; laysan_phase_summary.csv
+cluster,object,field-specific,Frozen analysis field: cluster.,laysan_last_passage_event_metrics.csv.gz; laysan_phase_null_audit.csv.gz; laysan_reconstruction_audit.csv.gz
+conditional_L_pass,bool,field-specific,Frozen analysis field: conditional L pass.,joint_model_summary.csv
+dataset,object,see description,Short analysis-system identifier.,conditional_L_3x3_grid.csv; joint_model_summary.csv; laysan_last_passage_event_metrics.csv.gz; laysan_phase_null_audit.csv.gz; laysan_phase_summary.csv
+eligible,bool,field-specific,Frozen analysis field: eligible.,laysan_reconstruction_audit.csv.gz
+estimable_grids,int64,field-specific,Frozen analysis field: estimable grids.,joint_model_summary.csv
+estimand,object,see description,Name of the reported statistical quantity.,laysan_phase_summary.csv
+event_id,object,see description,Stable identifier for one movement event within its source trajectory.,laysan_last_passage_event_metrics.csv.gz; laysan_reconstruction_audit.csv.gz
+events,int64,see description,Number of qualified event-scale rows contributing to the estimate.,joint_model_summary.csv; laysan_phase_null_audit.csv.gz; laysan_phase_summary.csv
+family,object,see description,Analysis family: decomposition (A) or rho-tau localisation (B).,laysan_last_passage_event_metrics.csv.gz; laysan_phase_null_audit.csv.gz; laysan_phase_summary.csv
+geometry_endpoint_is_last_record,bool,field-specific,Frozen analysis field: geometry endpoint is last record.,laysan_reconstruction_audit.csv.gz
+holm_phase_p,float64,see description,Holm-adjusted one-sided phase-randomisation P value.,laysan_phase_summary.csv
+length_tertile,int64,"km, m or log length as named",Movement-distance or length quantity denoted by length tertile; consult the table README for transformation.,conditional_L_3x3_grid.csv
+master_tokens,int64,field-specific,Frozen analysis field: master tokens.,laysan_phase_null_audit.csv.gz
+n_record_runs,int64,count,Count of n record runs.,laysan_last_passage_event_metrics.csv.gz; laysan_reconstruction_audit.csv.gz
+n_runs,int64,count,Count of n runs.,laysan_last_passage_event_metrics.csv.gz; laysan_reconstruction_audit.csv.gz
+observed_unit_equal,float64,see description,Observed estimate after equal weighting of biological units.,laysan_phase_summary.csv
+phase_L_union_pass,bool,probability,Randomisation or adjusted probability value for the named comparison.,joint_model_summary.csv
+phase_null_mean,float64,see description,Mean estimate across structure-preserving circular-phase null replicates.,laysan_phase_summary.csv
+phase_p_one_sided,float64,probability,Randomisation or adjusted probability value for the named comparison.,laysan_phase_summary.csv
+phase_reps,int64,probability,Randomisation or adjusted probability value for the named comparison.,laysan_phase_summary.csv
+positive_grids,int64,field-specific,Frozen analysis field: positive grids.,joint_model_summary.csv
+positive_support,bool,AIC units or correlation,Model-support quantity denoted by positive support; positive relative support favours Lomax over exponential.,laysan_phase_summary.csv
+rho_tau_distinct_cell,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_tau_distinct_cell`).,laysan_last_passage_event_metrics.csv.gz
+rho_tau_distinct_cell_fraction,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_tau_distinct_cell_fraction`).,laysan_phase_summary.csv
+run_key,object,field-specific,Frozen analysis field: run key.,laysan_reconstruction_audit.csv.gz
+scale_m,int64,m,Radial-drawdown scale in metres.,conditional_L_3x3_grid.csv; joint_model_summary.csv; laysan_last_passage_event_metrics.csv.gz; laysan_phase_null_audit.csv.gz; laysan_phase_summary.csv; laysan_reconstruction_audit.csv.gz
+segment_key,object,field-specific,Frozen analysis field: segment key.,laysan_last_passage_event_metrics.csv.gz; laysan_phase_null_audit.csv.gz
+segments,int64,count,Count of segments.,laysan_phase_summary.csv
+standardized_L_union,float64,field-specific,Frozen analysis field: standardized L union.,joint_model_summary.csv
+standardized_L_union_ci_high,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+standardized_L_union_ci_low,float64,estimate units,Lower or upper endpoint of the reported 95% confidence interval for the named estimate.,joint_model_summary.csv
+status,object,field-specific,Frozen analysis field: status.,laysan_reconstruction_audit.csv.gz
+units,int64,see description,Number of biological sampling units contributing to the estimate.,laysan_phase_summary.csv
+valid_unique_offsets,int64,field-specific,Frozen analysis field: valid unique offsets.,laysan_phase_null_audit.csv.gz

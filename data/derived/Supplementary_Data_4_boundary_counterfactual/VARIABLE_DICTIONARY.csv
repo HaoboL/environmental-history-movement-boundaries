@@ -1,0 +1,22 @@
+column,dtype,unit,description,files
+eligible_records_median,float64,field-specific,Frozen analysis field: eligible records median.,segment_boundary_audit.csv
+eligible_records_min,int64,field-specific,Frozen analysis field: eligible records min.,segment_boundary_audit.csv
+event_count_match,bool,0/1 or false/true,Boolean indicator for event count match.,segment_boundary_audit.csv
+events,int64,see description,Number of qualified event-scale rows contributing to the estimate.,segment_boundary_audit.csv
+mean_logchl,float64,field-specific,Chlorophyll-a-derived quantity denoted by `mean_logchl`; log fields use natural logarithms and rank fields are within-event fractions.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
+median_log_length,float64,"km, m or log length as named",Movement-distance or length quantity denoted by median log length; consult the table README for transformation.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
+old_n_steps,int64,field-specific,Frozen analysis field: old n steps.,segment_boundary_audit.csv
+replicate,int64,see description,"Counterfactual, phase-null or bootstrap replicate identifier.",eligible_record_counterfactual_distribution.csv.gz
+rho_chl_median_log_length,float64,field-specific,Chlorophyll-a-derived quantity denoted by `rho_chl_median_log_length`; log fields use natural logarithms and rank fields are within-event fractions.,eligible_record_counterfactual_distribution.csv.gz
+rho_chl_support,float64,field-specific,Chlorophyll-a-derived quantity denoted by `rho_chl_support`; log fields use natural logarithms and rank fields are within-event fractions.,eligible_record_counterfactual_distribution.csv.gz
+rho_coordinate_max_abs_error_km,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_coordinate_max_abs_error_km`).,segment_boundary_audit.csv
+rho_support_abs_error,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_abs_error`).,segment_boundary_audit.csv
+rho_support_old,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_old`).,segment_boundary_audit.csv
+rho_support_rebuilt,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_rebuilt`).,segment_boundary_audit.csv
+scheme,object,field-specific,Frozen analysis field: scheme.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
+segment_key,object,field-specific,Frozen analysis field: segment key.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv
+support,float64,AIC units or correlation,Model-support quantity denoted by support; positive relative support favours Lomax over exponential.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
+tau_confirmation_reach_positive,bool,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_confirmation_reach_positive`).,segment_boundary_audit.csv
+tau_duplicate_fixes,int64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_duplicate_fixes`).,segment_boundary_audit.csv
+tau_nonincreasing_adjacent_pairs,int64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_nonincreasing_adjacent_pairs`).,segment_boundary_audit.csv
+track_id,object,see description,Stable source trajectory or deployment identifier.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv
