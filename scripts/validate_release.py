@@ -14,7 +14,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "metadata/FILE_MANIFEST.csv"
-EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv", "output"}
+EXCLUDED_PARTS = {
+    ".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv",
+    "output", "external_inputs",
+}
 TEXT_SUFFIXES = {".py", ".md", ".txt", ".toml", ".yml", ".yaml", ".cff"}
 
 
