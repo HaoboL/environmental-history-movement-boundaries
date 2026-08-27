@@ -276,7 +276,10 @@ def build_main() -> None:
 \hbadness=10000
 \urlstyle{{same}}
 \title{{{inline_latex(title)}}}
-\author{{Author names and affiliations: to be completed\\\small Corresponding author: to be completed}}
+\author{{Haobo Liu$^{{1}}$ and Ke Li$^{{1,*}}$\\[0.5em]
+\small $^{{1}}$School of Aeronautic Science and Engineering, Beihang University,\\
+\small 37 Xueyuan Road, Beijing 100191, China\\[0.35em]
+\small $^{{*}}$Correspondence: like@buaa.edu.cn}}
 \date{{}}
 \begin{{document}}
 \maketitle
@@ -292,10 +295,14 @@ def build_main() -> None:
         output.append("")
     output.extend([
         r"\clearpage", render_references(sections["References"]), "",
-        r"\section*{Acknowledgements}", r"\textit{To be completed before submission.}", "",
-        r"\section*{Author contributions}", r"\textit{To be completed using author initials.}", "",
+        r"\section*{Acknowledgements}",
+        "This work was supported by the National Natural Science Foundation of China (NSFC; grant 61773039). We thank the original investigators and repositories for making the tracking, behavioural and environmental datasets available.", "",
+        r"\section*{Author contributions}",
+        "Conceptualization, H.L.; methodology, H.L.; software, H.L.; validation, H.L.; formal analysis, H.L.; investigation, H.L.; data curation, H.L.; writing---original draft, H.L.; writing---review and editing, H.L.; visualization, H.L.; supervision, K.L.; funding acquisition, K.L. Both authors read and approved the final manuscript.", "",
         r"\section*{Competing interests}",
-        "The authors declare no competing interests. This statement must be confirmed by all authors before submission.",
+        "The authors declare no competing interests.", "",
+        r"\section*{Use of artificial intelligence-assisted technologies}",
+        "A large language model was used for language drafting and manuscript organization under author supervision. It did not generate raw data or make final scientific decisions. The authors verified all numerical claims against archived analysis tables and take full responsibility for the manuscript.",
         r"\end{document}",
     ])
     MAIN_TEX.write_text("\n".join(output) + "\n", encoding="utf-8")
@@ -402,7 +409,10 @@ def build_si() -> None:
 \hbadness=10000
 \urlstyle{{same}}
 \title{{{inline_latex(document_title)}\\[0.6em]\large {inline_latex(article_title)}}}
-\author{{Author names and affiliations: to be completed before submission}}
+\author{{Haobo Liu$^{{1}}$ and Ke Li$^{{1,*}}$\\[0.5em]
+\small $^{{1}}$School of Aeronautic Science and Engineering, Beihang University,\\
+\small 37 Xueyuan Road, Beijing 100191, China\\[0.35em]
+\small $^{{*}}$Correspondence: like@buaa.edu.cn}}
 \date{{}}
 \begin{{document}}
 \maketitle
