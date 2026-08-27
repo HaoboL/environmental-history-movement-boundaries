@@ -7,9 +7,9 @@ There are two supported reproduction paths:
 | Path | Downloads | Purpose | Typical time |
 |---|---:|---|---:|
 | **Frozen-result reproduction** | none | Validate the release, rerun audits and rebuild all figures from the article's frozen tables | minutes |
-| **Public-source reconstruction** | about 3 GB animal data plus track-specific CHL subsets | Retrieve the original public observations and satellite inputs used to construct the analysis tables | hours, network-dependent |
+| **Public-source retrieval** | about 3 GB animal data plus track-specific CHL subsets | Retrieve the original public observations and satellite inputs used to construct the analysis tables | hours, network-dependent |
 
-The two paths are deliberately separate. A reader can verify every plotted value without downloading tens of gigabytes of sensor data, while a full reconstruction remains possible from the original public sources.
+The two paths are deliberately separate. A reader can verify every plotted value without downloading tens of gigabytes of sensor data, while the original public input layer remains independently retrievable.
 
 ## Repository contents
 
