@@ -22,12 +22,12 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT
-MANUSCRIPT = ROOT / "manuscript"
 FIGURES = ROOT / "output/figures"
 OUT = ROOT / "output/supplementary_data"
 
 D104 = ROOT / "results/last_record_decomposition"
 D127 = ROOT / "results/laysan_same_event"
+D130 = ROOT / "results/mean_logchl_sensitivity"
 D45 = ROOT / "results/landing_timing"
 D107 = ROOT / "results/shearwater_behavior"
 D106 = ROOT / "results/booby_behavior_context"
@@ -75,8 +75,20 @@ PACKAGES: dict[str, list[tuple[Path, str, str, str]]] = {
          "One row per dataset-scale same-event joint model.",
          "dataset + scale_m"),
         (D127 / "conditional_L_3x3_grid.csv", "conditional_L_3x3_grid.csv",
-         "One row per dataset-scale-absolute-CHL-tertile-length-tertile cell.",
+         "One row per dataset-scale-bout-background-tertile-length-tertile cell.",
          "dataset + scale_m + abs_tertile + length_tertile"),
+        (D130 / "mean_logchl_joint_model_summary.csv", "mean_logchl_joint_model_summary.csv",
+         "One row per dataset-scale joint model after replacing median(log CHL) by mean(log CHL).",
+         "dataset + scale_m"),
+        (D130 / "mean_logchl_conditional_L_3x3_grid.csv", "mean_logchl_conditional_L_3x3_grid.csv",
+         "One row per dataset-scale-background-tertile-length-tertile cell for the mean(log CHL) sensitivity.",
+         "dataset + scale_m + abs_tertile + length_tertile"),
+        (D130 / "mean_vs_median_joint_model_comparison.csv", "mean_vs_median_joint_model_comparison.csv",
+         "Side-by-side mean(log CHL) sensitivity and primary median(log CHL) joint-model summaries.",
+         "dataset + scale_m"),
+        (D130 / "final_summary.json", "mean_logchl_sensitivity_final_summary.json",
+         "Frozen gate verdict, hashes and model readback for the mean(log CHL) sensitivity.",
+         "JSON object"),
     ],
     "Supplementary_Data_3_behaviour_context": [
         (D45 / "uesaka_scale_direction_summary.csv", "wandering_albatross_landing_scale_summary.csv",
@@ -301,7 +313,7 @@ def build_source_data() -> list[dict[str, object]]:
 
 
 def build_description(package_rows: list[dict[str, object]], source_rows: list[dict[str, object]]) -> Path:
-    path = MANUSCRIPT / "DESCRIPTION_OF_ADDITIONAL_SUPPLEMENTARY_FILES.md"
+    path = OUT / "DESCRIPTION_OF_ADDITIONAL_SUPPLEMENTARY_FILES.md"
     lines = [
         "# Description of additional supplementary files", "",
         "## Environmental history shapes movement boundaries and search scaling", "",
@@ -372,11 +384,13 @@ def main() -> int:
                     OUT / "SUPPLEMENTARY_DATA_CONTENTS.csv", description]
     public_paths.extend(sorted((OUT / "source_data_csv").glob("*.csv")))
     public_paths.extend(archives)
-    public_rows = [{"file": str(path.relative_to(MANUSCRIPT)), "bytes": path.stat().st_size,
+    public_rows = [{"file": str(path.relative_to(OUT)), "bytes": path.stat().st_size,
                     "sha256": sha256(path)} for path in public_paths]
     public_manifest_path = OUT / "PUBLIC_FILE_MANIFEST.csv"
     with public_manifest_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["file", "bytes", "sha256"])
+        writer = csv.DictWriter(
+            handle, fieldnames=["file", "bytes", "sha256"], lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(public_rows)
 

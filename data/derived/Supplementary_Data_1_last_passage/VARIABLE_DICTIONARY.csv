@@ -17,12 +17,12 @@ b_chl_eligible,int64,field-specific,Chlorophyll-a-derived quantity denoted by `b
 bootstrap_ci_high,float64,see description,Upper endpoint of the 95% biological-unit-cluster bootstrap interval.,formal_summary.csv
 bootstrap_ci_low,float64,see description,Lower endpoint of the 95% biological-unit-cluster bootstrap interval.,formal_summary.csv
 bootstrap_reps,int64,field-specific,Frozen analysis field: bootstrap reps.,formal_summary.csv
-cluster,object,field-specific,Frozen analysis field: cluster.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
-dataset,object,see description,Short analysis-system identifier.,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
-estimand,object,see description,Name of the reported statistical quantity.,formal_summary.csv
-event_id,object,see description,Stable identifier for one movement event within its source trajectory.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+cluster,str,field-specific,Frozen analysis field: cluster.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+dataset,str,see description,Short analysis-system identifier.,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
+estimand,str,see description,Name of the reported statistical quantity.,formal_summary.csv
+event_id,str,see description,Stable identifier for one movement event within its source trajectory.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
 events,int64,see description,Number of qualified event-scale rows contributing to the estimate.,formal_summary.csv
-family,object,see description,Analysis family: decomposition (A) or rho-tau localisation (B).,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
+family,str,see description,Analysis family: decomposition (A) or rho-tau localisation (B).,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
 frozen_events,int64,field-specific,Frozen analysis field: frozen events.,coverage.csv
 geometry_pass,int64,field-specific,Frozen analysis field: geometry pass.,coverage.csv
 holm_phase_p,float64,see description,Holm-adjusted one-sided phase-randomisation P value.,formal_summary.csv
@@ -40,7 +40,7 @@ rho_tau_distinct_cell,bool; float64; int64,field-specific,Quantity evaluated at 
 rho_tau_distinct_cell_fraction,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_tau_distinct_cell_fraction`).,coverage.csv; formal_summary.csv
 rho_union,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_union`).,family_b_event_metrics.csv.gz
 scale_m,int64,m,Radial-drawdown scale in metres.,coverage.csv; family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz; formal_summary.csv
-segment_key,object,field-specific,Frozen analysis field: segment key.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
+segment_key,str,field-specific,Frozen analysis field: segment key.,family_a_event_metrics.csv.gz; family_b_event_metrics.csv.gz
 segments,int64,count,Count of segments.,formal_summary.csv
 tau_high,float64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_high`).,family_b_event_metrics.csv.gz
 tau_low,float64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_low`).,family_b_event_metrics.csv.gz

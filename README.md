@@ -13,7 +13,7 @@ The two paths are deliberately separate. A reader can verify every plotted value
 
 ## Repository contents
 
-- `analysis/`: formal statistical analyses used by the article.
+- `analysis/`: formal statistical analyses used by the article, including the single frozen mean-versus-median path-background sensitivity.
 - `audits/`: independent implementations of the last-record and behavioural checks.
 - `figures/`: builders for all four main and five supplementary figures, including their source-data exporters.
 - `data/source_data/`: CSV source data underlying every main and supplementary figure.
@@ -72,6 +72,8 @@ make figures
 ```
 
 The builders write PDF, SVG, PNG, colour-vision previews and build audits to `output/figures/`. They read only frozen formal results, so they do not rerun movement segmentation, CHL extraction, bootstrapping, randomisation or model fitting.
+
+The primary same-event model summarises endpoint-excluded CHL runs along each realised bout with `median(log CHL)`. The prespecified sensitivity in `analysis/mean_logchl_sensitivity.py` changes only that summary to `mean(log CHL)`; its 20,000-replicate frozen output is in `results/mean_logchl_sensitivity/` and is included in Supplementary Data 2.
 
 Equivalent explicit commands are:
 

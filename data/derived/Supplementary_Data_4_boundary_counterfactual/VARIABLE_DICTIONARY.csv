@@ -13,10 +13,10 @@ rho_coordinate_max_abs_error_km,float64,field-specific,Quantity evaluated at or 
 rho_support_abs_error,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_abs_error`).,segment_boundary_audit.csv
 rho_support_old,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_old`).,segment_boundary_audit.csv
 rho_support_rebuilt,float64,field-specific,Quantity evaluated at or involving the retrospectively identified last radial record (`rho_support_rebuilt`).,segment_boundary_audit.csv
-scheme,object,field-specific,Frozen analysis field: scheme.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
-segment_key,object,field-specific,Frozen analysis field: segment key.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv
+scheme,str,field-specific,Frozen analysis field: scheme.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
+segment_key,str,field-specific,Frozen analysis field: segment key.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv
 support,float64,AIC units or correlation,Model-support quantity denoted by support; positive relative support favours Lomax over exponential.,rho_segment_metrics.csv; tau_confirmation_reach_diagnostic.csv
 tau_confirmation_reach_positive,bool,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_confirmation_reach_positive`).,segment_boundary_audit.csv
 tau_duplicate_fixes,int64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_duplicate_fixes`).,segment_boundary_audit.csv
 tau_nonincreasing_adjacent_pairs,int64,field-specific,Quantity evaluated at or involving the later drawdown-confirmation point (`tau_nonincreasing_adjacent_pairs`).,segment_boundary_audit.csv
-track_id,object,see description,Stable source trajectory or deployment identifier.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv
+track_id,str,see description,Stable source trajectory or deployment identifier.,rho_segment_metrics.csv; segment_boundary_audit.csv; tau_confirmation_reach_diagnostic.csv

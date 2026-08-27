@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import sys
+import zipfile
 from pathlib import Path
 
 import numpy as np
@@ -106,6 +108,47 @@ def validate_source_data() -> None:
             raise AssertionError(f"Source_Data.xlsx missing sheets: {sorted(missing)}")
 
 
+def validate_mean_logchl_sensitivity() -> None:
+    result_dir = ROOT / "results/mean_logchl_sensitivity"
+    summary = pd.read_csv(result_dir / "mean_logchl_joint_model_summary.csv")
+    if len(summary) != 4:
+        raise AssertionError(f"mean(log CHL) sensitivity expected 4 rows, found {len(summary)}")
+    required = {
+        ("goto", 100),
+        ("usgs_laysan_albatross", 500),
+        ("usgs_laysan_albatross", 1000),
+        ("usgs_laysan_albatross", 2000),
+    }
+    observed = set(zip(summary.dataset.astype(str), summary.scale_m.astype(int)))
+    if observed != required:
+        raise AssertionError(f"mean(log CHL) sensitivity systems/scales differ: {sorted(observed)}")
+    gates = (
+        summary.beta_absolute_ci_high.lt(0)
+        & summary.standardized_L_union_ci_low.gt(0)
+        & summary.beta_L_low.gt(0)
+        & summary.positive_grids.eq(9)
+        & summary.estimable_grids.eq(9)
+    )
+    if not gates.all():
+        raise AssertionError("mean(log CHL) sensitivity frozen gate is not satisfied in every row")
+    final = json.loads((result_dir / "final_summary.json").read_text(encoding="utf-8"))
+    if final.get("verdict") != "MEAN_LOGCHL_SENSITIVITY_PASSED" or not final.get("gate_pass"):
+        raise AssertionError("mean(log CHL) sensitivity final verdict is not PASS")
+    if int(final.get("bootstrap_reps", 0)) != 20000 or not final.get("cpu1_excluded"):
+        raise AssertionError("mean(log CHL) sensitivity resource/readback mismatch")
+    archive = ROOT / "data/derived/Supplementary_Data_2_laysan_same_event.zip"
+    required_members = {
+        "mean_logchl_joint_model_summary.csv",
+        "mean_logchl_conditional_L_3x3_grid.csv",
+        "mean_vs_median_joint_model_comparison.csv",
+        "mean_logchl_sensitivity_final_summary.json",
+    }
+    with zipfile.ZipFile(archive) as bundle:
+        names = {Path(name).name for name in bundle.namelist()}
+    if not required_members.issubset(names):
+        raise AssertionError(f"Supplementary Data 2 missing mean-sensitivity files: {sorted(required_members-names)}")
+
+
 def validate_text_safety() -> None:
     forbidden = [
         re.compile("/home/" + "liu/"),
@@ -132,6 +175,7 @@ def main() -> int:
         ("manifest", validate_manifest),
         ("last-record identities", validate_last_record_identities),
         ("source-data coverage", validate_source_data),
+        ("mean-logCHL sensitivity", validate_mean_logchl_sensitivity),
         ("text safety", validate_text_safety),
     ]
     for index, (name, check) in enumerate(checks, start=1):

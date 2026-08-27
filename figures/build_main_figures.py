@@ -18,6 +18,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.lines import Line2D
 from PIL import Image
 import cmocean
 
@@ -287,11 +288,14 @@ def load_example() -> tuple[pd.DataFrame, pd.Series]:
 
 
 def errorbar_x(ax: plt.Axes, estimate: float, low: float, high: float,
-               y: float, color: str, marker: str = "o", label: str | None = None) -> None:
+               y: float, color: str, marker: str = "o", label: str | None = None,
+               filled: bool = True) -> None:
     ax.errorbar(
         estimate, y, xerr=np.array([[estimate - low], [high - estimate]]),
         fmt=marker, color=color, ecolor=BLACK, elinewidth=0.75, capsize=2,
-        markersize=4.2, markeredgecolor=BLACK, markeredgewidth=0.3, label=label,
+        markersize=4.2, markerfacecolor=color if filled else "white",
+        markeredgecolor=BLACK if filled else color, markeredgewidth=0.65,
+        label=label,
     )
 
 
@@ -369,7 +373,7 @@ def build_figure1(event: pd.DataFrame, example: pd.Series) -> dict:
     axc.axhline(0, color=BLACK, lw=0.65)
     axc.set_xticks(xpos, [r"Record $R$", r"Last record $L$", r"Endpoint $E$"])
     axc.set_ylabel("Combined-tail contrast")
-    axc.set_title(r"Exact decomposition: $E=R+L$", loc="left")
+    axc.set_title(r"Combined-tail decomposition: $E_{union}=R_{union}+L_{union}$", loc="left")
 
     a_rows = summary.query(
         "dataset == 'goto' and scale_m == 100 and family == 'A' and "
@@ -380,18 +384,31 @@ def build_figure1(event: pd.DataFrame, example: pd.Series) -> dict:
     for offset, component, color, marker in [(-0.11, "R", RECORD, "o"), (0.11, "L", OBSERVED, "D")]:
         for pos, tail in zip(y, tails):
             row = a_rows[a_rows["estimand"].eq(f"{component}_{tail}")].iloc[0]
-            errorbar_x(axd, row["observed_unit_equal"], row["bootstrap_ci_low"],
-                       row["bootstrap_ci_high"], pos + offset, color, marker,
-                       component if tail == "high" else None)
+            errorbar_x(
+                axd, row["observed_unit_equal"], row["bootstrap_ci_low"],
+                row["bootstrap_ci_high"], pos + offset, color, marker,
+                filled=bool(row["positive_support"]),
+            )
             axd.scatter(row["phase_null_mean"], pos + offset, marker="x", s=18,
                         color=NULL, lw=0.8, zorder=4)
     axd.axvline(0, color=BLACK, lw=0.65, ls=(0, (3, 2)))
     axd.set_yticks(y, ["Upper tail", "Lower tail", "Either tail"])
     axd.set_xlabel("Observed contrast (95% CI)")
-    axd.set_title("Selection component", loc="left")
-    axd.scatter([], [], marker="x", s=18, color=NULL, lw=0.8, label="Phase-null mean")
-    axd.legend(frameon=False, fontsize=5.3, loc="center right", ncol=1,
-               handletextpad=0.5, labelspacing=0.3)
+    axd.set_title("Both tails contribute to last-record selection", loc="left")
+    axd.legend(
+        handles=[
+            Line2D([], [], marker="o", linestyle="none", markerfacecolor="white",
+                   markeredgecolor=RECORD, markeredgewidth=0.65, markersize=4.2,
+                   label=r"Record $R$: not Holm-supported"),
+            Line2D([], [], marker="D", linestyle="none", markerfacecolor=OBSERVED,
+                   markeredgecolor=BLACK, markeredgewidth=0.4, markersize=4.2,
+                   label=r"Last record $L$: Holm-supported"),
+            Line2D([], [], marker="x", linestyle="none", color=NULL, markersize=4.2,
+                   label="Phase-null mean"),
+        ],
+        frameon=False, fontsize=5.1, loc="center right", ncol=1,
+        handletextpad=0.45, labelspacing=0.25,
+    )
 
     b_rows = summary.query(
         "dataset == 'goto' and scale_m == 100 and family == 'B' and "
@@ -432,8 +449,9 @@ def build_figure2() -> dict:
         "behavior_group == 'forage_dominant' and estimand == 'L_union'"
     ).copy()
     source = pd.concat([
-        d104.query("family == 'A' and estimand == 'L_union'").assign(panel="a"),
-        laysan.assign(panel="b"), landing.assign(panel="c"), shear.assign(panel="d"),
+        laysan.assign(panel="a"),
+        d104.query("family == 'A' and estimand == 'L_union'").assign(panel="b"),
+        landing.assign(panel="c"), shear.assign(panel="d"),
     ], ignore_index=True, sort=False)
     source.to_csv(OUT / "fig2_source_data.csv", index=False)
 
@@ -450,28 +468,28 @@ def build_figure2() -> dict:
     colors = [OBSERVED for _ in repeated["dataset"]]
     markers = ["o" if value == "goto" else "D" for value in repeated["dataset"]]
     for yval, row, color, marker in zip(yy, repeated.itertuples(), colors, markers):
-        errorbar_x(axa, row.observed_unit_equal, row.bootstrap_ci_low,
+        errorbar_x(axb, row.observed_unit_equal, row.bootstrap_ci_low,
                    row.bootstrap_ci_high, yval, color, marker)
-        axa.scatter(row.phase_null_mean, yval, marker="x", s=18,
+        axb.scatter(row.phase_null_mean, yval, marker="x", s=18,
                     color=NULL, lw=0.8, zorder=4)
-    axa.axvline(0, color=BLACK, lw=0.65, ls=(0, (3, 2)))
-    axa.set_yticks(yy, repeated["label"])
-    axa.set_xlabel(r"$L_{union}$ (95% CI)")
-    axa.set_title("Primary and booby systems", loc="left")
-    axa.text(0.03, 0.04, "grey × = phase-null mean", transform=axa.transAxes, fontsize=5.3)
+    axb.axvline(0, color=BLACK, lw=0.65, ls=(0, (3, 2)))
+    axb.set_yticks(yy, repeated["label"])
+    axb.set_xlabel(r"$L_{union}$ (95% CI)")
+    axb.set_title("Extension beyond albatrosses", loc="left")
+    axb.text(0.03, 0.04, "grey × = phase-null mean", transform=axb.transAxes, fontsize=5.3)
 
     laysan = laysan.query("estimand == 'L_union'").sort_values("scale_m")
     laysan_y = np.arange(len(laysan))[::-1]
     for yval, row in zip(laysan_y, laysan.itertuples()):
-        errorbar_x(axb, row.observed_unit_equal, row.bootstrap_ci_low,
+        errorbar_x(axa, row.observed_unit_equal, row.bootstrap_ci_low,
                    row.bootstrap_ci_high, yval, OBSERVED, "o")
-        axb.scatter(row.phase_null_mean, yval, marker="x",
+        axa.scatter(row.phase_null_mean, yval, marker="x",
                     color=NULL, s=20, lw=0.8)
-    axb.set_yticks(laysan_y, [f"{int(v):,}" for v in laysan["scale_m"]])
-    axb.set_xlabel(r"$L_{union}$ (95% CI)")
-    axb.set_ylabel("Drawdown scale (m)")
-    axb.set_title("Laysan albatross", loc="left")
-    axb.text(0.03, 0.05, "grey × = phase-null mean", transform=axb.transAxes, fontsize=5.3)
+    axa.set_yticks(laysan_y, [f"{int(v):,}" for v in laysan["scale_m"]])
+    axa.set_xlabel(r"$L_{union}$ (95% CI)")
+    axa.set_ylabel("Drawdown scale (m)")
+    axa.set_title("Replication in another albatross system", loc="left")
+    axa.text(0.03, 0.05, "grey × = phase-null mean", transform=axa.transAxes, fontsize=5.3)
 
     landing["window"] = landing.apply(
         lambda row: f"{int(row.bin_low_s)}–{int(row.bin_high_s)} s", axis=1
@@ -486,7 +504,7 @@ def build_figure2() -> dict:
     )
     axc.axhline(0, color=BLACK, lw=0.65, ls=(0, (3, 2)))
     axc.set_xticks(x, landing["window"], rotation=25, ha="right")
-    axc.set_ylabel("Landing probability\n(post − pre)")
+    axc.set_ylabel("Post − pre landing probability")
     axc.set_xlabel("Matched interval from 100-m boundary")
     axc.set_title("Landing timing", loc="left")
 
@@ -507,7 +525,9 @@ def build_figure2() -> dict:
     axd.set_xlabel("Drawdown scale (m)")
     axd.set_ylabel(r"$L_{union}$ (95% CI)")
     axd.set_title("Foraging context", loc="left")
-    axd.legend(frameon=False, fontsize=5.4, loc="best")
+    axd.set_ylim(-0.03, 0.62)
+    axd.legend(frameon=False, fontsize=5.2, loc="upper center", ncol=2,
+               bbox_to_anchor=(0.5, 0.99), handletextpad=0.4, columnspacing=0.8)
 
     for ax in axs.flat:
         ax.grid(False)
@@ -527,7 +547,7 @@ def build_figure3() -> dict:
     grids = pd.read_csv(grid_path)
     source_rows: list[dict[str, object]] = []
     source_specs = [
-        ("absolute CHL", "beta_absolute", "beta_absolute_ci_low", "beta_absolute_ci_high"),
+        ("bout-level CHL background", "beta_absolute", "beta_absolute_ci_low", "beta_absolute_ci_high"),
         ("L_low", "beta_L_low", "beta_L_low_ci_low", "beta_L_low_ci_high"),
         ("L_high", "beta_L_high", "beta_L_high_ci_low", "beta_L_high_ci_high"),
     ]
@@ -589,7 +609,7 @@ def build_figure3() -> dict:
         )
     ybase = np.arange(len(models))[::-1]
     specs = [
-        ("beta_absolute", "beta_absolute_ci_low", "beta_absolute_ci_high", RECORD, "o", "Absolute CHL"),
+        ("beta_absolute", "beta_absolute_ci_low", "beta_absolute_ci_high", RECORD, "o", "Bout CHL background"),
         ("beta_L_low", "beta_L_low_ci_low", "beta_L_low_ci_high", BLUE, "v", r"$L_{low}$"),
         ("beta_L_high", "beta_L_high_ci_low", "beta_L_high_ci_high", ORANGE, "^", r"$L_{high}$"),
     ]
@@ -625,7 +645,7 @@ def build_figure3() -> dict:
         ax.set_title(title, fontsize=6.2)
         ax.set_xticks([0, 1, 2], ["Low", "Mid", "High"])
         ax.set_yticks([0, 1, 2], ["Long", "Mid", "Short"])
-        ax.set_xlabel("Absolute CHL tertile")
+        ax.set_xlabel("Background tertile")
         if ax is heat_axes[0]:
             ax.set_ylabel("Bout-length tertile")
         else:
@@ -639,7 +659,7 @@ def build_figure3() -> dict:
         ax.tick_params(direction="out", length=2.5, pad=2)
     return finish(
         fig, "fig3_dual_reference", (7.2, 5.4), [model_path, grid_path],
-        "Absolute and path-relative quantities are same-event retrospective statistics, not demonstrated sensory or cognitive reference frames.",
+        "Background and path-relative quantities are same-event retrospective statistics.",
         all_axes,
     )
 
