@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import os
 from pathlib import Path
 
 
@@ -22,12 +23,14 @@ def digest(path: Path) -> str:
 
 
 def main() -> None:
-    files = [
-        path for path in ROOT.rglob("*")
-        if path.is_file()
-        and path != MANIFEST
-        and not any(part in EXCLUDED for part in path.relative_to(ROOT).parts)
-    ]
+    files: list[Path] = []
+    for directory, subdirectories, filenames in os.walk(ROOT):
+        subdirectories[:] = [name for name in subdirectories if name not in EXCLUDED]
+        base = Path(directory)
+        for filename in filenames:
+            path = base / filename
+            if path != MANIFEST:
+                files.append(path)
     temporary = MANIFEST.with_suffix(".csv.part")
     with temporary.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(

@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import sys
 import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import numpy as np
@@ -31,16 +33,19 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
+def iter_release_files():
+    """Yield release files without descending into excluded directory trees."""
+    for directory, subdirectories, filenames in os.walk(ROOT):
+        subdirectories[:] = [name for name in subdirectories if name not in EXCLUDED_PARTS]
+        base = Path(directory)
+        for filename in filenames:
+            path = base / filename
+            if path != MANIFEST:
+                yield path
+
+
 def release_files() -> set[str]:
-    files: set[str] = set()
-    for path in ROOT.rglob("*"):
-        if not path.is_file() or path == MANIFEST:
-            continue
-        relative = path.relative_to(ROOT)
-        if any(part in EXCLUDED_PARTS for part in relative.parts):
-            continue
-        files.add(relative.as_posix())
-    return files
+    return {path.relative_to(ROOT).as_posix() for path in iter_release_files()}
 
 
 def validate_manifest() -> None:
@@ -101,11 +106,17 @@ def validate_source_data() -> None:
     workbook = ROOT / "data/derived/Source_Data.xlsx"
     if not workbook.is_file() or workbook.stat().st_size == 0:
         raise AssertionError("Source_Data.xlsx is absent or empty")
-    with pd.ExcelFile(workbook) as excel:
-        required_sheets = {Path(name).stem for name in expected}
-        missing = required_sheets - set(excel.sheet_names)
-        if missing:
-            raise AssertionError(f"Source_Data.xlsx missing sheets: {sorted(missing)}")
+    with zipfile.ZipFile(workbook) as archive:
+        workbook_xml = ET.fromstring(archive.read("xl/workbook.xml"))
+    namespace = {"x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    sheet_names = {
+        sheet.attrib["name"]
+        for sheet in workbook_xml.findall("x:sheets/x:sheet", namespace)
+    }
+    required_sheets = {Path(name).stem for name in expected}
+    missing = required_sheets - sheet_names
+    if missing:
+        raise AssertionError(f"Source_Data.xlsx missing sheets: {sorted(missing)}")
 
 
 def validate_mean_logchl_sensitivity() -> None:
@@ -156,11 +167,8 @@ def validate_text_safety() -> None:
         re.compile(r"github_pat_[A-Za-z0-9_]+"),
         re.compile(r"ghp_[A-Za-z0-9]+"),
     ]
-    for path in ROOT.rglob("*"):
-        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
-            continue
-        relative = path.relative_to(ROOT)
-        if any(part in EXCLUDED_PARTS for part in relative.parts):
+    for path in iter_release_files():
+        if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         if "frozen_originals" in path.parts:
             continue

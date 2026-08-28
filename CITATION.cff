@@ -5,6 +5,10 @@ type: software
 authors:
   - family-names: Liu
     given-names: Haobo
+    orcid: "https://orcid.org/0000-0001-9231-8961"
+  - family-names: Li
+    given-names: Ke
+    orcid: "https://orcid.org/0000-0002-3694-1772"
 repository-code: "https://github.com/HaoboL/environmental-history-movement-boundaries"
 license: MIT
 version: 1.0.0

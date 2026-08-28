@@ -279,7 +279,8 @@ def build_main() -> None:
 \author{{Haobo Liu$^{{1}}$ and Ke Li$^{{1,*}}$\\[0.5em]
 \small $^{{1}}$School of Aeronautic Science and Engineering, Beihang University,\\
 \small 37 Xueyuan Road, Beijing 100191, China\\[0.35em]
-\small $^{{*}}$Correspondence: like@buaa.edu.cn}}
+\small $^{{*}}$Correspondence: like@buaa.edu.cn\\[0.2em]
+\small ORCID: Haobo Liu, 0000-0001-9231-8961; Ke Li, 0000-0002-3694-1772}}
 \date{{}}
 \begin{{document}}
 \maketitle
@@ -412,7 +413,8 @@ def build_si() -> None:
 \author{{Haobo Liu$^{{1}}$ and Ke Li$^{{1,*}}$\\[0.5em]
 \small $^{{1}}$School of Aeronautic Science and Engineering, Beihang University,\\
 \small 37 Xueyuan Road, Beijing 100191, China\\[0.35em]
-\small $^{{*}}$Correspondence: like@buaa.edu.cn}}
+\small $^{{*}}$Correspondence: like@buaa.edu.cn\\[0.2em]
+\small ORCID: Haobo Liu, 0000-0001-9231-8961; Ke Li, 0000-0002-3694-1772}}
 \date{{}}
 \begin{{document}}
 \maketitle
